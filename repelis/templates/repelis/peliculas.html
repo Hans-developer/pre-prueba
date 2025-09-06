@@ -1,0 +1,22 @@
+{% extends 'repelis/base.html'%}
+
+
+
+{% block content %}
+<div class="container py-4 text-center">
+    <div class="row g-4 justify-content-center">
+        {% for p in pelis %}
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ p.imagen.url }}" class="card-img-top" alt="agarralas">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: purple;">{{ p.titulo }}</h5>
+                    <p class="card-text">{{ p.descripcion|slice:25 }}. .</p>
+                    <a href="{% url 'detalle' p.id %}" class="btn btn-primary">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

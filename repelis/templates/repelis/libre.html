@@ -1,0 +1,65 @@
+{% extends 'repelis/base.html'%}
+
+{% block title %}Planes{% endblock %}
+
+{% block content %}
+
+<!-- Asegúrate de tener Bootstrap 5 cargado -->
+<div class="container py-5">
+    <h2 class="text-center mb-4">Nuestros Planes</h2>
+    <div class="row justify-content-center g-4">
+        
+        <!-- Plan Gratis -->
+        <div class="col-12 col-sm-6 col-md-4">
+            <div class="card border-primary h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-primary">Plan Gratis</h5>
+                    <h6 class="card-subtitle mb-3 text-muted">₡0 / mes</h6>
+                    <ul class="list-unstyled">
+                        <li>✔ Acceso limitado</li>
+                        <li>✔ Publicidad incluida</li>
+                        <li>✘ No incluye estrenos</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline-primary">Usar Gratis</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan Estándar -->
+        <div class="col-12 col-sm-6 col-md-4">
+            <div class="card border-success h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-success">Plan Estándar</h5>
+                    <h6 class="card-subtitle mb-3 text-muted">₡2,500 / mes</h6>
+                    <ul class="list-unstyled">
+                        <li>✔ Acceso ilimitado</li>
+                        <li>✔ Menos anuncios</li>
+                        <li>✔ Calidad HD</li>
+                    </ul>
+                    <a href="#" class="btn btn-success">Suscribirse</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan Premium -->
+        <div class="col-12 col-sm-6 col-md-4">
+            <div class="card border-warning h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-warning">Plan Premium</h5>
+                    <h6 class="card-subtitle mb-3 text-muted">₡4,500 / mes</h6>
+                    <ul class="list-unstyled">
+                        <li>✔ Acceso completo</li>
+                        <li>✔ Sin anuncios</li>
+                        <li>✔ Calidad 4K + Estrenos</li>
+                        <li>✔ Descargas ilimitadas</li>
+                    </ul>
+                    <a href="#" class="btn btn-warning text-white">¡Mejor opción!</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock%}

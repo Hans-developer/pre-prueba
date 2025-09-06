@@ -1,0 +1,23 @@
+{% extends 'repelis/base.html'%}
+
+
+{% block title %}Peliculas{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row g-4 justify-content-center">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+            <div class="card h-100 w-100"> <!-- Tarjeta ocupa todo el ancho disponible -->
+                <img src="{{ pelicula.imagen.url }}" class="card-img-top" alt="agarralas">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: purple;">{{ pelicula.titulo }}</h5>
+                    <p class="card-text">{{ pelicula.descripcion }}</p>
+                    <a href="{% url 'pelicula' %}" class="btn btn-primary">Atrás</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

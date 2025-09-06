@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Repelis - {% block title %} {% endblock %} </title>
+</head>
+
+<body style="background-color: black;">
+    <div class="container py-4 text-center">
+        <div class="row">
+            <ul class="nav nav-tabs text-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-film" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm4 0v6h8V1zm8 8H4v6h8zM1 1v2h2V1zm2 3H1v2h2zM1 7v2h2V7zm2 3H1v2h2zm-2 3v2h2v-2zM15 1h-2v2h2zm-2 3v2h2V4zm2 3h-2v2h2zm-2 3v2h2v-2zm2 3h-2v2h2z" />
+                        </svg></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pelicula' %}">Ver Estrenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'acerca' %}">Acerca</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'planes' %}">planes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container py-3">
+        <div class="text-center">
+            <h1><span class="l1">R</span><span class="l2">e</span><span class="l3">P</span><span
+                    class="l4">e</span><span class="l5">l</span><span class="l6">i</span><span class="l7">s</span></h1>
+        </div>
+    </div>
+    <div class="container">
+
+    </div>
+    {% block content %}
+    {% endblock %}
+
+
+
+    <footer class="container py-4">
+        <div class="row g-4"> <!-- Agrega espacio entre columnas -->
+            <div class="col-12 col-sm-10 col-md-6 mx-auto">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color:purple">¿ Necesitas contactarnos ?</h5>
+                        <p class="card-text">Contactanos para cualquier duda.</p>
+                        <a href="{% url 'contacto' %}" class="btn btn-primary">Ir a contacto</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-10 col-md-6 mx-auto">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color:purple">¿Como la uso?</h5>
+                        <p class="card-text">Solo en peliculas busque cuald esea ver y listo a reproducir.</p>
+                        <a href="{% url 'pelicula'%}" class="btn btn-primary">Ir a películas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
